@@ -7,7 +7,11 @@ ft_memccpy.c ft_memmove.c ft_putnbr_fd.c ft_strdup.c ft_strlen.c ft_strrchr.c ft
 ft_calloc.c ft_isdigit.c ft_memchr.c ft_memset.c ft_putstr_fd.c ft_strjoin.c ft_strmapi.c \
 ft_strtrim.c
 
+SRCSB		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c $(SRCS)
+
 OBJS		= $(SRCS:.c=.o)
+OBJSB		= $(SRCSB:.c=.o)
 
 FLAGS		= -Wall -Wextra -Werror
 
@@ -15,13 +19,17 @@ $(NAME):	$(OBJS)
 			ar rc $@ $^
 			ranlib $@
 
+bonus:		$(OBJSB)
+			ar rc $(NAME) $^
+			ranlib $(NAME)
+
 %.o:		%.c libft.h
 			gcc $(FLAGS) -c $< -o $@
 
 all:		$(NAME)
 
 clean:
-			rm -f $(OBJS)
+			rm -f $(OBJS) $(OBJSB)
 
 fclean:		clean
 			rm -f $(NAME)
