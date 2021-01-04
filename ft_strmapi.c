@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:40:28 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/03 16:35:59 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/04 16:55:22 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	if (!s)
-		return (0);
-	if (!(str = malloc(sizeof(*str) * ft_strlen((char *)s) + 1)))
-		return (0);
+		return (NULL);
+	if (!(str = malloc(sizeof(*str) * (ft_strlen((char *)s) + 1))))
+		return (NULL);
 	i = -1;
 	while (s[++i])
 		str[i] = f(i, s[i]);

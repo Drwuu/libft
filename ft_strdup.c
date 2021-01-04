@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:59:19 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/03 16:35:41 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/04 16:49:35 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	int		i;
 
 	if (!(str = malloc((sizeof(char) * (ft_strlen((char *)s1) + 1)))))
-		return (0);
+		return (NULL);
 	i = 0;
 	while (s1[i])
 	{

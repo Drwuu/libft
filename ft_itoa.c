@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:33:01 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/03 16:34:36 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/04 16:07:53 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ char	*ft_itoa(int n)
 	long	l_nb;
 
 	len = findnbrlen((long)n);
-	if (!(nbr = malloc(sizeof(*nbr) * len + 1)))
-		return (0);
+	if (!(nbr = malloc(sizeof(*nbr) * (len + 1))))
+		return (NULL);
 	l_nb = n;
 	i = 0;
 	if (n < 0)
@@ -55,6 +55,6 @@ char	*ft_itoa(int n)
 		nbr[i] = '-';
 	}
 	convert_process(l_nb, nbr, i, len - 1);
-	nbr[len] = 0;
+	nbr[len] = '\0';
 	return (nbr);
 }

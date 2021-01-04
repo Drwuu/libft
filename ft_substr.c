@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:42:40 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/03 16:36:16 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/04 17:02:00 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (0);
-	if (!(str = malloc(sizeof(*str) * len + 1)))
-		return (0);
+	if (!(str = malloc(sizeof(*str) * (len + 1))))
+		return (NULL);
 	if ((size_t)start >= ft_strlen((char *)s))
 	{
 		str[0] = '\0';
