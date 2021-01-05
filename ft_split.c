@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:38:57 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/03 16:35:35 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/05 15:24:01 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 int		findstrlen(char const *s, char c, int i)
 {
-	while (s[i] && s[i] != c)
-		i++;
-	return (i);
+	int j;
+
+	j = 0;
+	while (s[i] && s[i++] != c)
+		j++;
+	return (j);
 }
 
 int		countstr(char const *s, char c)
@@ -63,8 +66,7 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	int		new_word;
 
-	if (!(s && c 	\
-			&& (finalstr = malloc(sizeof(*finalstr) * (countstr(s, c) + 1)))))
+	if (!s || !(finalstr = malloc(sizeof(*finalstr) * (countstr(s, c) + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
