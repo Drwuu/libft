@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:42:40 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/05 15:25:41 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/08 11:06:21 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 int		find_real_len(char const *s, size_t len, unsigned int start)
 {
-	unsigned int i;
+	unsigned int	i;
+	unsigned int	j;
 
-	i = 0;
-	while (s[i] && i < start + (unsigned int)len - 1)
-		i++;
-	return (i);
+	j = 0;
+	i = start;
+	while (s[i++] && j < (unsigned int)len)
+		j++;
+	return (j);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
