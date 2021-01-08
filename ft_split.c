@@ -6,13 +6,23 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:38:57 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/05 15:24:01 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/08 18:15:59 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		findstrlen(char const *s, char c, int i)
+static char		**free_malloc_error(char **finalstr)
+{
+	int i;
+
+	i = 0;
+	while (finalstr[i])
+		free(finalstr[i++]);
+	return (NULL);
+}
+
+static int		findstrlen(char const *s, char c, int i)
 {
 	int j;
 
@@ -22,7 +32,7 @@ int		findstrlen(char const *s, char c, int i)
 	return (j);
 }
 
-int		countstr(char const *s, char c)
+static int		countstr(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -45,7 +55,7 @@ int		countstr(char const *s, char c)
 	return (j);
 }
 
-char	*buildstr(char const *s, char c, int i)
+static char		*buildstr(char const *s, char c, int i)
 {
 	char	*str;
 	int		j;
@@ -59,7 +69,7 @@ char	*buildstr(char const *s, char c, int i)
 	return (str);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**finalstr;
 	int		i;
@@ -78,7 +88,7 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c && new_word)
 		{
 			if (!(finalstr[j++] = buildstr(s, c, i)))
-				return (NULL);
+				return (free_malloc_error(finalstr));
 			new_word = 0;
 		}
 		i++;
