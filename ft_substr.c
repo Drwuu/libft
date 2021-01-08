@@ -6,13 +6,13 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:42:40 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/08 11:06:21 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/08 18:09:23 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		find_real_len(char const *s, size_t len, unsigned int start)
+static int		find_real_len(char const *s, size_t len, unsigned int start)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -24,7 +24,7 @@ int		find_real_len(char const *s, size_t len, unsigned int start)
 	return (j);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char			*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	j;
@@ -32,7 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (0);
-	if ((size_t)start >= ft_strlen((char *)s))
+	if ((size_t)start >= ft_strlen(s))
 	{
 		if (!(str = malloc(1)))
 			return (NULL);

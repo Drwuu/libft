@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:30:06 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/03 16:35:51 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/08 17:57:55 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t destsize)
 	if (!src)
 		return (0);
 	i = 0;
-	len = ft_strlen((char *)src);
+	len = ft_strlen(src);
 	if (destsize == 0)
 		return (len);
 	while (src[i] && i < destsize - 1)

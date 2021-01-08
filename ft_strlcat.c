@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:29:33 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/03 16:35:48 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/08 17:57:45 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t srclen;
 
 	destlen = ft_strlen(dst);
-	srclen = ft_strlen((char *)src);
+	srclen = ft_strlen(src);
 	if (dstsize == 0)
 		return (srclen);
 	if (dstsize < destlen)

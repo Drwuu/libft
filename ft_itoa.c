@@ -6,13 +6,13 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:33:01 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/04 16:07:53 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/08 18:10:28 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		findnbrlen(long n)
+static int		findnbrlen(long n)
 {
 	int	len;
 
@@ -30,14 +30,14 @@ int		findnbrlen(long n)
 	return (len);
 }
 
-void	convert_process(long n, char *nbr, int i, int len)
+static void		convert_process(long n, char *nbr, int i, int len)
 {
 	nbr[len - i] = (n % 10) + '0';
 	if (n > 9)
 		convert_process(n / 10, nbr, ++i, len);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*nbr;
 	int		len;

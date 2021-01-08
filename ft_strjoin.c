@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:39:24 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/04 16:50:30 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/08 17:57:09 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (0);
-	if (!(str = malloc((sizeof(*str) * ((ft_strlen((char *)s1) +
-							ft_strlen((char *)s2)) + 1)))))
+	if (!(str = malloc((sizeof(*str) * ((ft_strlen(s1) +
+							ft_strlen(s2)) + 1)))))
 		return (NULL);
 	i = 0;
 	j = 0;
