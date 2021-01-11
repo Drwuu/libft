@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_char.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/23 00:51:53 by drwuu             #+#    #+#             */
-/*   Updated: 2021/01/10 14:14:36 by lwourms          ###   ########lyon.fr   */
+/*   Created: 2020/11/23 14:33:27 by lwourms           #+#    #+#             */
+/*   Updated: 2021/01/11 11:14:46 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+char	*ft_char(char c)
 {
-	t_list	*new_elem;
+	char *str;
 
-	if (!(new_elem = malloc(sizeof(*new_elem))))
+	if(!(str = malloc(2)))
 		return (NULL);
-	new_elem->content = content;
-	new_elem->next = NULL;
-	return (new_elem);
+	str[0] = c;
+	str[1] = '\0';
+	return (str);
 }
