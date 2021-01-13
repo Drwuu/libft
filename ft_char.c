@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:33:27 by lwourms           #+#    #+#             */
-/*   Updated: 2021/01/11 11:14:46 by lwourms          ###   ########lyon.fr   */
+/*   Updated: 2021/01/12 17:55:01 by lwourms          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_char(char c)
 {
 	char *str;
 
-	if(!(str = malloc(2)))
+	if (!(str = malloc(sizeof(*str) + 1)))
 		return (NULL);
 	str[0] = c;
 	str[1] = '\0';
