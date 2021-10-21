@@ -17,13 +17,15 @@ ft_color.c ft_get_time.c ft_error.c get_next_line_utils_2.c get_next_line_utils.
 get_next_line.c ft_strjoin_with_sep.c ft_sort_numbers.c ft_is_smaller.c ft_is_equal.c ft_is_greater.c \
 ft_lstlast_to.c ft_wr_malloc.c
 
-VPATH			= srcs includes $(MATH) $(GRAPHIC) $(TIME) $(GNL) $(WR_MALLOC)
+VPATH			= srcs includes $(MATH) $(GRAPHIC) $(TIME) $(GNL) $(WR_MALLOC) \
+								$(SPLIT)
 
 GNL				= ./srcs/gnl
 MATH			= ./srcs/math
 GRAPHIC			= ./srcs/graphic
 TIME			= ./srcs/time
 WR_MALLOC		= ./srcs/wr_malloc
+SPLIT			= ./srcs/split
 INCLUDES		= ./includes
 OBJS_DIR		= ./objects
 
