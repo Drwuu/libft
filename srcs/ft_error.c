@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 02:04:23 by drwuu             #+#    #+#             */
-/*   Updated: 2021/10/22 16:05:44 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 19:18:59 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ const char *msg_error)
 	if (lst_nullable)
 		ft_lstclear(lst_nullable);
 	ft_putstr_fd((char *)msg_error, 2);
+	wrdestroy();
 	exit(0);
 }
