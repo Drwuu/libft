@@ -6,12 +6,11 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:33:01 by lwourms           #+#    #+#             */
-/*   Updated: 2021/06/30 08:34:54 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:08:15 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/wr_malloc.h"
 
 static int	findnbrlen(unsigned int n)
 {

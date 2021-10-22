@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 16:05:04 by ludwuu            #+#    #+#             */
-/*   Updated: 2021/06/30 08:36:05 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:03:33 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,9 @@
 # include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "../includes/wr_malloc.h"
+# include "libft.h"
 
 int		get_next_line(int fd, char **line);
-size_t	ft_strlen(const char *s);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strdup(const char *s1);
-char	*ft_strjoin(char const *s1, char const *s2);
 int		find_newline(char *str);
 int		copy_line(const char *buf, char **str);
 int		free_str_error(char *str, char *buf);

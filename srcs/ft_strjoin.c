@@ -6,12 +6,11 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:39:24 by lwourms           #+#    #+#             */
-/*   Updated: 2021/06/30 08:35:08 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:11:15 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/wr_malloc.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,85 +6,45 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 14:13:17 by ludwuu            #+#    #+#             */
-/*   Updated: 2021/06/30 08:32:18 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:03:19 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *s)
+int	find_newline(char *str)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(const char *s1)
-{
-	char	*str;
-	int		i;
-
-	str = wrmalloc(sizeof(*str) * ((int)ft_strlen(s1) + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (s1[i])
+	while (str[i])
 	{
-		str[i] = s1[i];
+		if (str[i] == '\n')
+			return (i);
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	return (-1);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	copy_line(const char *buf, char **str)
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+	char	*tmp;
 
-	if (!s)
-		return (NULL);
-	str = wrmalloc(sizeof(*str) * (len + 1));
-	if (!str)
-		return (NULL);
-	if ((size_t)start >= ft_strlen((char *)s))
+	if (!*str)
 	{
-		str[0] = '\0';
-		return ((char *)str);
+		*str = ft_strdup(buf);
+		if (!*str)
+			return (-1);
 	}
-	i = 0;
-	j = start;
-	while (j < start + (unsigned int)len && s[j])
-		str[i++] = s[j++];
-	str[i] = '\0';
-	return (str);
-}
-
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	char	*str;
-	int		i;
-	int		j;
-
-	if (!s1 || !s2)
-		return (NULL);
-	str = wrmalloc((sizeof(*str) * (ft_strlen((char *)s1) \
-		+ ft_strlen((char *)s2)) + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i])
-		str[j++] = s1[i++];
-	i = 0;
-	while (s2[i])
-		str[j++] = s2[i++];
-	str[j] = '\0';
-	return (str);
+	else
+	{
+		tmp = ft_strjoin(*str, buf);
+		if (!tmp)
+			return (-1);
+		wrfree(*str);
+		*str = tmp;
+	}
+	return (1);
 }
 
 int	free_str_error(char *str, char *buf)

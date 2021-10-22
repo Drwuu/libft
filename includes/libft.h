@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 20:31:31 by lwourms           #+#    #+#             */
-/*   Updated: 2021/10/21 14:00:52 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 15:58:25 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 # include <math.h>
 # include <limits.h>
 # include <sys/time.h>
+# include "wr_malloc.h"
+# include "split_utils.h"
+# include "get_next_line.h"
 
 typedef struct s_vec3
 {

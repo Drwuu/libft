@@ -6,12 +6,11 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 02:04:23 by drwuu             #+#    #+#             */
-/*   Updated: 2021/06/29 16:21:47 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:05:44 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/wr_malloc.h"
 
 void	ft_error(void *to_free, void **to_free_2, t_list **lst_nullable, \
 const char *msg_error)

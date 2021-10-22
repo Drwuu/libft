@@ -6,13 +6,11 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 14:41:28 by lwourms           #+#    #+#             */
-/*   Updated: 2021/06/30 08:35:00 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:08:56 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/split_utils.h"
-#include "../includes/wr_malloc.h"
 
 int	is_sep(const char *str, const char *sep, int i)
 {

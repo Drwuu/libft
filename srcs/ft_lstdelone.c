@@ -6,12 +6,11 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 00:51:53 by drwuu             #+#    #+#             */
-/*   Updated: 2021/06/29 16:21:29 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:11:03 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/wr_malloc.h"
 
 static void	del_content(t_list *element)
 {

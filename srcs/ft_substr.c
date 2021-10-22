@@ -6,12 +6,11 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:42:40 by lwourms           #+#    #+#             */
-/*   Updated: 2021/06/30 08:35:22 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:11:24 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/wr_malloc.h"
 
 static int	find_real_len(char const *s, size_t len, unsigned int start)
 {

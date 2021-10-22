@@ -6,12 +6,11 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 15:13:34 by lwourms           #+#    #+#             */
-/*   Updated: 2021/06/30 08:35:17 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:11:21 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/wr_malloc.h"
 
 static int	is_set(char const *set, char const c)
 {

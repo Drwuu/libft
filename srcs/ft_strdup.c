@@ -6,12 +6,11 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:59:19 by lwourms           #+#    #+#             */
-/*   Updated: 2021/06/29 16:21:14 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:11:30 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include "../includes/wr_malloc.h"
 
 char	*ft_strdup(const char *s1)
 {
