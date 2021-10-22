@@ -15,7 +15,7 @@ ft_lstiter.c ft_lstmap.c \
 ft_math.c ft_vec3_sub.c ft_vec3_create.c ft_vec3_normalize.c \
 ft_color.c ft_get_time.c ft_error.c get_next_line_utils_2.c get_next_line_utils.c \
 get_next_line.c ft_strjoin_with_sep.c ft_sort_numbers.c ft_is_smaller.c ft_is_equal.c ft_is_greater.c \
-ft_lstlast_to.c ft_wr_malloc.c
+ft_lstlast_to.c ft_wr_malloc.c ft_find_str_in_str.c
 
 VPATH			= srcs includes $(MATH) $(GRAPHIC) $(TIME) $(GNL) $(WR_MALLOC) \
 								$(SPLIT)

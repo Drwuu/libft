@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 20:31:31 by lwourms           #+#    #+#             */
-/*   Updated: 2021/06/29 20:23:13 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/21 14:00:52 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,7 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t destsize);
 size_t			ft_strlcat(char *dst, const char *src, size_t destsize);
 char			*ft_strnstr(const char *haystack, const char *needle, \
 					size_t len);
+char			*ft_find_str_in_str(char *str, char *to_find);
 
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
