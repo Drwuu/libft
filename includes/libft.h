@@ -6,13 +6,14 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 20:31:31 by lwourms           #+#    #+#             */
-/*   Updated: 2021/10/23 16:04:22 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/23 16:06:50 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <errno.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
