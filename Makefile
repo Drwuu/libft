@@ -14,42 +14,38 @@ ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstclear.c ft_lstdelone.c \
 ft_lstiter.c ft_lstmap.c \
 ft_math.c ft_vec3_sub.c ft_vec3_create.c ft_vec3_normalize.c \
 ft_color.c ft_get_time.c ft_error.c get_next_line_utils.c \
-get_next_line.c ft_strjoin_with_sep.c ft_sort_numbers.c ft_is_smaller.c ft_is_equal.c ft_is_greater.c \
-ft_lstlast_to.c ft_wr_malloc.c ft_find_str_in_str.c
+get_next_line.c ft_strjoin_with_sep.c ft_sort_numbers.c ft_is_smaller.c \
+ft_is_equal.c ft_is_greater.c ft_lstlast_to.c ft_wr_malloc.c \
+ft_find_str_in_str.c
 
-VPATH			= srcs includes $(MATH) $(GRAPHIC) $(TIME) $(GNL) $(WR_MALLOC) \
-								$(SPLIT)
+VPATH			= srcs includes \
+				$(COMPARE) $(CONVERT) $(ERROR) $(FIND) $(FREE) $(GNL) \
+				$(GRAPHIC) $(LIST) $(MATH) $(MEM) $(SORT) $(SPLIT) $(STR) \
+				$(TIME) $(WRITE) $(WR_MALLOC)
 
-GNL				= ./srcs/gnl
-MATH			= ./srcs/math
-GRAPHIC			= ./srcs/graphic
-TIME			= ./srcs/time
-WR_MALLOC		= ./srcs/wr_malloc
-SPLIT			= ./srcs/split
 INCLUDES		= ./includes
 OBJS_DIR		= ./objects
+
+COMPARE			= ./srcs/compare
+CONVERT			= ./srcs/convert
+ERROR			= ./srcs/error
+FIND			= ./srcs/find
+FREE			= ./srcs/free
+GNL				= ./srcs/gnl
+GRAPHIC			= ./srcs/graphic
+LIST			= ./srcs/list
+MATH			= ./srcs/math
+MEM				= ./srcs/mem
+SORT			= ./srcs/sort
+SPLIT			= ./srcs/split
+STR				= ./srcs/str
+TIME			= ./srcs/time
+WRITE			= ./srcs/write
+WR_MALLOC		= ./srcs/wr_malloc
 
 FLAGS			= -Wall -Wextra -Werror
 OPT				= -O3 -flto -Ofast -ffast-math -march=native
 OBJS			= $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
-
-BLACK			=	\033[0;30m
-RED				=	\033[0;31m
-GREEN			=	\033[0;32m
-ORANGE			=	\033[0;33m
-BLUE			=	\033[0;34m
-PURPLE			=	\033[0;35m
-CYAN			=	\033[0;36m
-LIGHT_GRAY		=	\033[0;37m
-DARK_GRAY		=	\033[1;30m
-LIGHT_RED		=	\033[1;31m
-LIGHT_GREEN		=	\033[1;32m
-YELLOW			=	\033[1;33m
-LIGHT_BLUE		=	\033[1;34m
-LIGHT_PURPLE	=	\033[1;35m
-LIGHT_CYAN		=	\033[1;36m
-WHITE			=	\033[1;37m
-NO_COLOR		=	\033[0m
 
 all:				$(NAME)
 
@@ -70,5 +66,23 @@ fclean:				clean
 						@rm -f $(NAME)
 
 re:					fclean all
+
+BLACK			=	\033[0;30m
+RED				=	\033[0;31m
+GREEN			=	\033[0;32m
+ORANGE			=	\033[0;33m
+BLUE			=	\033[0;34m
+PURPLE			=	\033[0;35m
+CYAN			=	\033[0;36m
+LIGHT_GRAY		=	\033[0;37m
+DARK_GRAY		=	\033[1;30m
+LIGHT_RED		=	\033[1;31m
+LIGHT_GREEN		=	\033[1;32m
+YELLOW			=	\033[1;33m
+LIGHT_BLUE		=	\033[1;34m
+LIGHT_PURPLE	=	\033[1;35m
+LIGHT_CYAN		=	\033[1;36m
+WHITE			=	\033[1;37m
+NO_COLOR		=	\033[0m
 
 .PHONY:				all clean fclean re
