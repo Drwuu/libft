@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 15:34:17 by lwourms           #+#    #+#             */
-/*   Updated: 2021/06/29 16:10:51 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/24 13:12:34 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,13 @@ void	*wrmalloc(unsigned long size)
 	return (buffer);
 }
 
-int	wrfree(void *ptr)
+static int	wr_free_process(void *ptr, t_list **wrstart)
 {
-	t_list	*prev;
 	t_list	*current;
 	t_list	*next;
-	t_list	**wrstart;
+	t_list	*prev;
 
 	prev = NULL;
-	wrstart = wrgetter();
 	current = *wrstart;
 	while (current)
 	{
@@ -60,7 +58,9 @@ int	wrfree(void *ptr)
 		if (current->content == ptr)
 		{
 			free(ptr);
+			ptr = NULL;
 			free(current);
+			current = NULL;
 			if (prev)
 				prev->next = next;
 			else
@@ -70,6 +70,14 @@ int	wrfree(void *ptr)
 		prev = current;
 		current = current->next;
 	}
+}
+
+int	wrfree(void *ptr)
+{
+	t_list	**wrstart;
+
+	wrstart = wrgetter();
+	wr_free_process(ptr, wrstart);
 	return (0);
 }
 
