@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 20:31:31 by lwourms           #+#    #+#             */
-/*   Updated: 2021/10/26 16:08:54 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/26 16:28:38 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,6 +166,7 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 long long		ft_get_time(void);
 
 /* write */
+int				ft_putchar(int c);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putstr_at_fd(const char *s, int start, int end, int fd);

@@ -6,15 +6,16 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:11:56 by lwourms           #+#    #+#             */
-/*   Updated: 2021/10/26 15:17:40 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/26 16:28:40 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar(char c)
+int	ft_putchar(int c)
 {
-	if (write(1, &c, 1) == -1)
-		return (EOF);
-	return (c);
+	int	i;
+
+	i = write(1, &c, 1);
+	return (i);
 }
