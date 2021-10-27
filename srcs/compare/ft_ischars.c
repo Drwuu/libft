@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char_ischars.c                                  :+:      :+:    :+:   */
+/*   ft_ischars.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:33:27 by lwourms           #+#    #+#             */
-/*   Updated: 2021/05/16 19:08:04 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/27 09:52:46 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-int	ft_char_ischars(char c, const char *chars)
+/*
+ * Check if str contains one of the char in chars
+ */
+int	ft_ischars(const char *str, const char *chars)
 {
-	int	i;
+	const char	*save;
 
-	i = 0;
-	while (*chars)
-		if (c == *chars++)
-			return (1);
-	return (0);
+	save = chars;
+	if (!str || !chars)
+		return (-1);
+	while (*str)
+	{
+		while (*chars)
+			if (*chars++ == *str)
+				return (TRUE);
+		chars = save;
+		*str++;
+	}
+	return (FALSE);
 }
