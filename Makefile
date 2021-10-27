@@ -1,15 +1,14 @@
 NAME		= libft.a
 
 SRCS		= \
-ft_char_ischars.c \
-ft_isalpha.c \
 ft_ischar.c \
+ft_ischars.c \
+ft_isalpha.c \
 ft_isalnum.c \
 ft_isascii.c \
 ft_isprint.c \
 ft_iswhitespace.c \
 ft_isdigit.c \
-ft_char_ischars.c \
 ft_is_smaller.c \
 ft_is_equal.c \
 ft_is_greater.c \

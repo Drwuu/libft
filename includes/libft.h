@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 20:31:31 by lwourms           #+#    #+#             */
-/*   Updated: 2021/10/26 16:28:38 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/27 10:16:21 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,8 @@ t_bool			ft_is_equal(int nb1, int nb2);
 t_bool			ft_is_greater(int nb1, int nb2);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
-int				ft_ischar(const char *s, const char *c);
-int				ft_char_ischars(char c, const char *chars);
+int				ft_ischar(const char *str, char c);
+int				ft_ischars(const char *str, const char *chars);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
 int				ft_isalpha(int c);

@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:33:27 by lwourms           #+#    #+#             */
-/*   Updated: 2021/10/27 09:52:46 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/27 10:16:31 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_ischars(const char *str, const char *chars)
 			if (*chars++ == *str)
 				return (TRUE);
 		chars = save;
-		*str++;
+		str++;
 	}
 	return (FALSE);
 }
