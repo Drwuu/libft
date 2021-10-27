@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 20:31:31 by lwourms           #+#    #+#             */
-/*   Updated: 2021/10/27 10:16:21 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/27 11:31:43 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ char			*ft_itoa_base(const char *base, unsigned long long n);
 /* error */
 void			ft_error(void *to_free, void **to_free_2, \
 				t_list **lst_nullable, const char *msg_error);
+void			ft_perror(const char *msg);
 
 /* find */
 int				ft_chr_index(const char *str, const char c, int i);

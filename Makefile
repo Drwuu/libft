@@ -20,6 +20,7 @@ ft_itoa_base.c \
 ft_tolower.c \
 ft_toupper.c \
 ft_error.c \
+ft_perror.c \
 ft_find_str_in_str.c \
 ft_chr_index.c \
 get_next_line_utils.c \
