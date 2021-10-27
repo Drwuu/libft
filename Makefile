@@ -66,6 +66,7 @@ ft_strmapi.c \
 ft_strtrim.c \
 ft_substr.c \
 ft_strjoin_with_sep.c \
+ft_strjoinchar.c \
 ft_get_time.c \
 ft_wr_malloc.c \
 ft_putstr_at_fd.c \
