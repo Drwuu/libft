@@ -76,11 +76,12 @@ ft_putchar_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_putstr_fd.c \
+get_printf_color.c \
 
 VPATH			= srcs includes \
 				$(COMPARE) $(CONVERT) $(ERROR) $(FIND) $(FREE) $(GNL) \
 				$(GRAPHIC) $(LIST) $(MATH) $(MEM) $(SORT) $(SPLIT) $(STR) \
-				$(TIME) $(WRITE) $(WR_MALLOC)
+				$(TIME) $(WRITE) $(WR_MALLOC) $(DEBUG)
 
 INCLUDES		= ./includes
 OBJS_DIR		= ./objects
@@ -101,6 +102,7 @@ STR				= ./srcs/str
 TIME			= ./srcs/time
 WRITE			= ./srcs/write
 WR_MALLOC		= ./srcs/wr_malloc
+DEBUG			= ./srcs/debug
 
 FLAGS			= -Wall -Wextra -Werror
 OPT				= -O3 -flto -Ofast -ffast-math -march=native

@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 20:31:31 by lwourms           #+#    #+#             */
-/*   Updated: 2021/10/27 19:25:42 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/28 13:04:18 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,5 +175,19 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putstr_at_fd(const char *s, int start, int end, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+
+/* debug */
+typedef enum e_pf_color
+{
+	RED,
+	BLUE,
+	GREEN,
+	YELLOW,
+	CYAN,
+	MAGENTA,
+	BLACK,
+	RESET
+}	t_pf_color;
+char	*get_printf_color(t_pf_color color);
 
 #endif
