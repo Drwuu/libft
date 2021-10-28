@@ -6,7 +6,7 @@
 /*   By: lwourms <lwourms@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 18:39:24 by lwourms           #+#    #+#             */
-/*   Updated: 2021/10/27 19:29:00 by lwourms          ###   ########.fr       */
+/*   Updated: 2021/10/27 20:41:05 by lwourms          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strjoinchar_wfree(char *s1, char c)
 	char	*str;
 	int		i;
 
+	str = NULL;
 	if (!s1)
 		ft_perror("ft_strjoinchar_wfree error");
 	str = wrmalloc(sizeof(*str) * (ft_strlen(s1) + 1 + 1));
@@ -25,8 +26,8 @@ char	*ft_strjoinchar_wfree(char *s1, char c)
 	i = -1;
 	while (s1[++i])
 		str[i] = s1[i];
-	wrfree(s1);
-	str[++i] = c;
+	str[i] = c;
 	str[++i] = '\0';
+	wrfree(s1);
 	return (str);
 }
