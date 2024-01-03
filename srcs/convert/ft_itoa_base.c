@@ -19,11 +19,12 @@ static int	find_n_len(unsigned long long n, int b_size)
 	len = 0;
 	if (n == 0)
 		return (1);
-	if (n < 0)
-	{
-		len++;
-		n *= -1;
-	}
+	// No need as it is unsigned n
+	// if (n < 0)
+	// {
+	// 	len++;
+	// 	n *= -1;
+	// }
 	while (n > 0)
 	{
 		len++;
